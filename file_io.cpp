@@ -3,3 +3,7 @@
 //
 
 #include "file_io.h"
+int load()
+{
+	
+}
