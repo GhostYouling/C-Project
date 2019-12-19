@@ -7,9 +7,38 @@
 #include "file_io.h"
 #include "kb_io.h"
 
+struct Book * head;
+
 int main()
 {
-    print_info();
 
+    //print_info();
+
+    head = CreateList(stdin);
+    BubbleSortByNo(head, '>');
+    OutputList(stdout, head);
+
+    printf("\n");
+
+    head = DeleteBooksByNo(head, 5);
+    OutputList(stdout, head);
+
+            /*
+    char opt;
+
+    opt = getchar();
+
+    switch(opt)
+    {
+        case '1': OutputList(stdout, head); break;
+        case '2':
+
+        case '3':
+        case '4':
+        case '5':
+        case '6':
+        case '0':
+    }
+     */
     return 0;
 }
